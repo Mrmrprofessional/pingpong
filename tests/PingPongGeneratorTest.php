@@ -8,13 +8,13 @@
         function test_generatePingPong_printNumbers()
         {
             $test_PingPongGenerator = new PingPongGenerator;
-            $input = 10;
+            $input = 2;
 
             //Act
-            $result = $test_PingPongGenerator->generateNumbers($input);
+            $result = $test_PingPongGenerator->generatePingPong($input);
 
             //Assert
-            $this->assertEquals(array(1,2,3,4,5,6,7,8,9,10), $result);
+            $this->assertEquals(array(1,2), $result);
 
         }
 
@@ -24,7 +24,7 @@
             $input = 3;
 
             //Act
-            $result = $test_PingPongGenerator->generatePing($input);
+            $result = $test_PingPongGenerator->generatePingPong($input);
 
             //Assert
             $this->assertEquals(array(1,2,"ping"), $result);
@@ -37,10 +37,10 @@
             $input = 5;
 
             //Act
-            $result = $test_PingPongGenerator->generatePong($input);
+            $result = $test_PingPongGenerator->generatePingPong($input);
 
             //Assert
-            $this->assertEquals(array(1,2,3,4,"pong"), $result);
+            $this->assertEquals(array(1,2,"ping",4,"pong"), $result);
 
         }
 
